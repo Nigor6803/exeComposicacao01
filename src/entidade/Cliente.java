@@ -45,6 +45,6 @@ public class Cliente {
 	
 	@Override
 	public String toString() {
-		return cliente +"("+sdf.format(aniversario)+") - " +email;
+		return cliente +" ("+sdf.format(aniversario)+") - " +email;
 	}
 }

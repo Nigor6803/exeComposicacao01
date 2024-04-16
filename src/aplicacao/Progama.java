@@ -36,7 +36,7 @@ public class Progama {
 		
 		Ordem ordem = new Ordem(new Date(), status, cliente);
 		
-		System.out.println("QUANTIDADE DE INTENS:");
+		System.out.print("QUANTIDADE DE INTENS:");
 		int n = edd.nextInt();
 		for (int i = 1;i<=n;i++) {
 			System.out.println("PRODUTO N°"+i+":");
@@ -54,6 +54,9 @@ public class Progama {
 			
 			ordem.addIntens(it);
 		}
+		
+		System.out.println();
+		System.out.println(ordem);
 		
 		edd.close();
 		

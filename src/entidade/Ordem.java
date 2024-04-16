@@ -1,10 +1,13 @@
 package entidade;
 
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
 public class Ordem {
+	
+	private static SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
 	private Date momentoDoPedido;
 	private OrdemStatus status;
 	
@@ -56,4 +59,28 @@ public class Ordem {
 		}
 		return soma;
 	}
+	
+	
+	public String toString() {
+		StringBuilder sb = new StringBuilder();
+		sb.append("MOMENTO DO PEDIDO:");
+		sb.append(sdf.format(momentoDoPedido)+"\n");
+		sb.append("STATUS DO PEDIDO:");
+		sb.append(status+"\n");
+		sb.append("CLIENTE:");
+		sb.append(cliente+"\n");
+		sb.append("ORDEM DOS PEDIDOS:\n");
+		for(OrdemPedido item: item) {
+			sb.append(item);
+			sb.append("\n");
+		}
+		sb.append("VALOR FINAL: $");
+		sb.append(String.format("%.2f", total()));
+		return sb.toString();
+	}
+	
+	
+	
+	
+	
 }

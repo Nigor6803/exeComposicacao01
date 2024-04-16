@@ -13,7 +13,7 @@ public class Cliente {
 	public Cliente() {
 		}
 	
-	public Cliente (String nome, String email, Date aniversario) {
+	public Cliente (String cliente, String email, Date aniversario) {
 		this.cliente = cliente;
 		this.email = email;
 		this.aniversario = aniversario;

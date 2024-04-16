@@ -48,4 +48,12 @@ public class Ordem {
 	public void removeIntens(OrdemPedido itens) {
 		item.remove(itens);
 	}
+	
+	public double total() {
+		double soma = 0;
+		for (OrdemPedido it : item) {
+			soma+=it.subTotal();
+		}
+		return soma;
+	}
 }

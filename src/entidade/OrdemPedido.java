@@ -1,21 +1,18 @@
 package entidade;
 
-import java.util.ArrayList;
-import java.util.List;
-
 public class OrdemPedido {
 	
 	private Integer quantidade;
 	private Double preco;
-	
-	private List <Produto> produtos = new ArrayList<>();
+	private Produto produto;
 	
 	public OrdemPedido() {
 		}
 	
-	public OrdemPedido(Integer quantidade, Double preco) {
+	public OrdemPedido(Integer quantidade, Double preco, Produto produto) {
 		this.quantidade = quantidade;
 		this.preco = preco;
+		this.produto = produto;
 	}
 
 	public Integer getQuantidade() {
@@ -34,7 +31,26 @@ public class OrdemPedido {
 		this.preco = preco;
 	}
 	
+	public Produto getProduto() {
+		return produto;
+	}
+
+	public void setProduto(Produto produto) {
+		this.produto = produto;
+	}
+
 	public Double subTotal() {
 		return quantidade*preco;
+	}
+	
+	@Override
+	public String toString() {
+		return getProduto().getNomeProduto()
+				+", $"
+				+String.format("%.2f", preco)
+				+", QUANTIDADE:"
+				+quantidade
+				+", SUBTOTAL: $"
+				+String.format("%.2f", subTotal());
 	}
 }

@@ -7,7 +7,7 @@ import java.util.List;
 
 public class Ordem {
 	
-	private static SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
+	private static SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy HH:mm:ss");
 	private Date momentoDoPedido;
 	private OrdemStatus status;
 	

@@ -1,9 +1,14 @@
 package entidade;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class OrdemPedido {
 	
 	private Integer quantidade;
 	private Double preco;
+	
+	private List <Produto> produtos = new ArrayList<>();
 	
 	public OrdemPedido() {
 		}
